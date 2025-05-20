@@ -1,0 +1,18 @@
+<div class="flex flex-col gap-4 pt-4">
+    <div class="flex flex-col gap-2">
+        <p class="text-2xl">Informe o CPF do Futuro Colaborado</p>
+        <p class="w-2xl">Se necessário, você poderá duplicar uma conta existente ou pausar e retornar este cadastro
+            futuramente.
+            Digite apenas os números (sem pontos ou traços).</p>
+    </div>
+
+    <div class="flex items-center h-full gap-4">
+        <input [(ngModel)]="cpf" type="text" placeholder="Digite o CPF"
+            class="border border-gray-300 rounded-md p-2 w-1/2">
+        <button class="bg-[#155c7d] w-60 h-12 rounded-md flex items-center justify-center cursor-pointer" (click)="searchCooperator()"
+            *ngIf="!loading">
+            <a class="text-lg text-white" href="/">Pesquisar</a>
+        </button>
+        <loading-circle [loading]="loading" *ngIf="loading"></loading-circle>
+    </div>
+</div>
