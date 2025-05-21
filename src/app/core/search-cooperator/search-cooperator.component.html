@@ -10,7 +10,7 @@
         </p>
     </div>
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 flex-wrap">
         <input [(ngModel)]="cpf" type="text" placeholder="Digite o CPF"
             class="border border-gray-300 rounded-md p-2 w-1/2">
         <button class="bg-[#155c7d] w-60 h-12 rounded-md flex items-center justify-center cursor-pointer"
@@ -20,7 +20,7 @@
         <app-loading-circle [loading]="loading" *ngIf="loading"></app-loading-circle>
     </div>
 
-    <div class="flex items-start gap-4" *ngIf="coperator">
+    <div class="flex items-start gap-4 flex-wrap" *ngIf="coperator">
         <app-card>
             <div>
                 <h2 card-title class="font-bold">Situação Cadastral do CPF</h2>
