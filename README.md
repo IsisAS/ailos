@@ -1,59 +1,46 @@
-# Ailos
+# Ailos – Desafio Técnico Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor(a) Frontend na **SOFTTEK**, com o objetivo de avaliar habilidades técnicas em Angular, arquitetura de componentes e reprodução de interfaces com base em um protótipo fornecido.
 
-## Development server
+## 📌 Objetivo
 
-To start a local development server, run:
+O desafio propõe a criação de uma aplicação Angular com duas páginas:
 
-```bash
-ng serve
-```
+- A primeira permite a **consulta de um CPF** e lida com os cenários de sucesso e erro.
+- A segunda apresenta os **dados do cooperado** caso o CPF seja válido, conforme layout de referência.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Tecnologias Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 17+ (standalone components)**
+- **TypeScript**
+- **Tailwind CSS**
+- **RxJS**
+- **Ngx-Toastr**
+- **Vite (via Angular CLI/Vite Plugin)**
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Instalação
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+1. **Clone o repositório:**
 
 ```bash
-ng build
+git clone https://github.com/IsisAS/ailos.git
+cd ailos
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+2. **Instale as depêndencias**
+ 
+ ```
+npm install
 ```
 
-## Running end-to-end tests
+3. **Rode a aplicação**
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+A aplicação estará disponível em: http://localhost:4200
