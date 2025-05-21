@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "ngx-toastr/toastr";
+@import "./styles/toastr.css";
 
 html,
 body {

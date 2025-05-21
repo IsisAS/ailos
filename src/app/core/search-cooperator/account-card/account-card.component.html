@@ -1,0 +1,22 @@
+<app-card>
+    <div>
+        <h2 card-title class="font-bold">{{ type }}</h2>
+        <p class="text-sm text-gray-500">{{ institution }}</p>
+    </div>
+
+    <div class="flex gap-4 items-center mt-4">
+        <i class='bx bx-credit-card text-2xl'></i>
+        <div>
+            <p class="text-gray-400 text-sm"><strong>Número da conta:</strong></p>
+            <p class="text-lg">{{ number }}</p>
+        </div>
+    </div>
+
+    <div class="flex gap-4 items-center" *ngIf="canDuplicate">
+        <i class='bx bx-refresh text-2xl'></i>
+        <div>
+            <p class="text-gray-400 text-sm"><strong>Ação:</strong></p>
+            <p class="text-lg text-[#155c7d]">Duplicar conta</p>
+        </div>
+    </div>
+</app-card>
