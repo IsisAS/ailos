@@ -2,13 +2,20 @@
     class="hidden sm:flex flex-col justify-between items-center fixed left-0 top-0 bottom-0 pt-15 pb-15 transition-all duration-300 ease-in-out"
     [ngClass]="(menuStateService.isOpen$ | async) ? 'w-24' : 'w-48'">
     <div class="w-full flex flex-col items-center gap-20">
-        <img src="./../../../assets/images/logo.png" class="w-[60px]" />
+        <img src="./../../../assets/images/logo.png" class="w-[60px]" alt="Logo"/>
 
-        <div class="flex flex-col gap-4 w-full p-2" [ngClass]="{ 'items-center': (menuStateService.isOpen$ | async) }">
-            <div *ngFor="let item of menuStateService.getMenuList()" (click)="navigateMenu(item)"
-                class="flex gap-2 items-center h-[40px] justify-start cursor-pointer pl-2 pr-2">
+        <div class="flex flex-col gap-4 w-full p-2" [ngClass]="{ 'items-center': (menuStateService.isOpen$ | async) === true }">
+            <div 
+                *ngFor="let item of menuStateService.getMenuList()" 
+                (click)="navigateMenu(item)"
+                (keydown.enter)="navigateMenu(item)"
+                (keydown.space)="navigateMenu(item)"
+                role="button"
+                tabindex="0"
+                class="flex gap-2 items-center h-[40px] justify-start cursor-pointer pl-2 pr-2 focus:outline-none"
+            >
                 <i class='bx text-white text-lg' [class]="item.icon"></i>
-                <p class="text-white text-md truncate" *ngIf="!(menuStateService.isOpen$ | async)">{{item.title}}</p>
+                <p class="text-white text-md truncate" *ngIf="(menuStateService.isOpen$ | async) === false">{{item.title}}</p>
             </div>
         </div>
     </div>

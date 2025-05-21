@@ -6,7 +6,7 @@ const IMPORTS = [CommonModule];
 @Component({
 	imports: [IMPORTS],
 	standalone: true,
-	selector: 'loading-circle',
+	selector: 'app-loading-circle',
 	templateUrl: './loading-circle.component.html',
 	styleUrls: ['./loading-circle.component.scss'],
 })
@@ -14,9 +14,7 @@ export class LoadingCircleComponent implements OnInit, OnDestroy {
 	@Input() loading: boolean = false;
 	@Input() color: string = '';
 	@Input() size: 'medium' | 'mini' = 'medium';
-
-	constructor() { }
-
+	
 	ngOnInit(): void {
 		if (this.color) {
 			document.documentElement.style.setProperty('--loader-color', this.color);

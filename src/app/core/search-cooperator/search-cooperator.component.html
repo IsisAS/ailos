@@ -15,7 +15,7 @@
             (click)="searchCooperator()" *ngIf="!loading">
             <p class="text-lg text-white">Consultar por CPF</p>
         </button>
-        <loading-circle [loading]="loading" *ngIf="loading"></loading-circle>
+        <app-loading-circle [loading]="loading" *ngIf="loading"></app-loading-circle>
     </div>
 
     <div class="flex items-start gap-4" *ngIf="coperator">

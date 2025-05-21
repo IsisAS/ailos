@@ -7,5 +7,4 @@ import { Component } from "@angular/core";
     templateUrl: "card.component.html",
 })
 export class CardComponent {
-    constructor() { }
 }
